@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "0bc98134-e872-4d23-9138-7a33bf8d5160",
+		"name": "PaginationAndSorting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14397829"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllOrderByFieldQuantity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/products/:field",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"products",
+						":field"
+					],
+					"variable": [
+						{
+							"key": "field",
+							"value": "quantity"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllOrderByFieldName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/products/:field",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"products",
+						":field"
+					],
+					"variable": [
+						{
+							"key": "field",
+							"value": "name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/products/pagination/:offset/:pageSize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"products",
+						"pagination",
+						":offset",
+						":pageSize"
+					],
+					"variable": [
+						{
+							"key": "offset",
+							"value": "2",
+							"description": "A partir de donde muestra, depende del pageSize"
+						},
+						{
+							"key": "pageSize",
+							"value": "10",
+							"description": "Cantida de registros por pagina"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll PaginationAndSort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/products/paginationAndSort/:offset/:pageSize/:field",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"products",
+						"paginationAndSort",
+						":offset",
+						":pageSize",
+						":field"
+					],
+					"variable": [
+						{
+							"key": "offset",
+							"value": "2",
+							"description": "A partir de donde muestra, depende del pageSize"
+						},
+						{
+							"key": "pageSize",
+							"value": "10",
+							"description": "Cantida de registros por pagina"
+						},
+						{
+							"key": "field",
+							"value": "",
+							"description": "Campo por el cual se quiere ordenar"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
